@@ -1,0 +1,107 @@
+.composition {
+    background-color: $yellowGeneral;
+    padding: 50px 50px;
+
+    &__container {
+        display: grid;
+        grid-template-rows: 28px min-content min-content min-content min-content;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    &-item:nth-child(1) {
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    &-item:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        margin: 50px 0 100px;
+    }
+
+    &-item:nth-child(3) {
+        grid-row-start: 1;
+        grid-row-end: 5;
+        grid-column-start: 2;
+        grid-column-end: 5;
+        justify-self: end;
+    }
+
+    &-item:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    &-item:nth-child(5) {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        align-self: flex-end;
+    }
+
+    // &-item:nth-child(6) {
+    //     grid-row-start: 5;
+    //     grid-row-end: 5;
+    // }
+
+    &-item:nth-child(6) {
+        grid-row-start: 5;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        margin-top: 100px;
+    }
+
+    &-item:nth-child(7) {
+        grid-row-start: 5;
+        grid-row-end: 5;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        margin-top: 100px;
+    }
+
+    &-item:nth-child(8) {
+        grid-row-start: 5;
+        grid-row-end: 5;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        margin-top: 100px;
+    }
+
+    &-item:nth-child(9) {
+        grid-row-start: 5;
+        grid-row-end: 5;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        margin-top: 100px;
+    }
+
+    &__suptext {
+        @include roboto-regular;
+        color: $textBlack;
+        font-size: 18px;
+        line-height: 28px;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        @include roboto-regular;
+        color: $textBlack;
+        font-size: 64px;
+        line-height: 64px;
+    }
+
+    &__text {
+        @include roboto-regular;
+        color: $textBlack;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    &__text:nth-child(1) {
+        margin-bottom: 20px
+    }
+
+    &__boldtext {
+        @include roboto-bold;
+    }
+}

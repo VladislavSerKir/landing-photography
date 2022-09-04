@@ -1,3 +1,7 @@
 .page {
-    background-color: $yellowGeneral;
+    background-color: $white;
+    margin: 0 auto;
+    box-sizing: border-box;
+    min-height: 100vh;
+    max-width: 1440px;
 }

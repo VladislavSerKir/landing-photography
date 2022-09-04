@@ -1,0 +1,12 @@
+.footer {
+    background-color: $redGeneral;
+    min-height: 124px;
+
+    &__copyright {
+        @include roboto-bold;
+        font-size: 15px;
+        line-height: 24px;
+        color: $textWhite;
+        padding: 50px;
+    }
+}

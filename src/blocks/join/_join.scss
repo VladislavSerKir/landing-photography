@@ -1,0 +1,71 @@
+.join {
+    background-color: $redGeneral;
+    padding: 50px 50px 36px;
+
+    &__container {
+        @include flex(stretch, flex-start);
+        gap: 50px;
+    }
+
+    &__group {
+        max-width: 700px
+    }
+
+    &__title {
+        @include roboto-regular;
+        font-size: 120px;
+        line-height: 120px;
+        color: $textWhite;
+        margin-bottom: 120px;
+    }
+
+    &__image {
+        max-width: 129px;
+        height: 100%;
+    }
+
+    &__form {
+        background-color: $white;
+        border: 2px solid $black;
+        border-radius: 8px;
+        height: 46px;
+        width: 551px;
+    }
+
+    &__input-button,
+    &__input-email,
+    &__input-email::placeholder {
+        @include roboto-regular;
+        color: $textBlack;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    &__input-email {
+        border: none;
+        width: 328px;
+        margin-left: 20px;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    &__input-email:active,
+    &__input-email:focus {
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__input-button {
+        height: 100%;
+        background-color: $white;
+        border: none;
+        border-left: 2px solid $black;
+        padding: 0 0 0 60px;
+    }
+
+    &__input-button:hover {
+        font-weight: 500;
+        cursor: pointer;
+    }
+}

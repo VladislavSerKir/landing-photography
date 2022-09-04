@@ -1,0 +1,45 @@
+.course {
+    background-color: $white;
+    padding: 50px 50px;
+
+    &-item:nth-child(1) {
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    &-item:nth-child(2) {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        max-height: 555px;
+        max-width: 642px;
+    }
+
+    &-item:nth-child(3) {
+        margin-top: 60px;
+    }
+
+    // &-item:nth-child(4) {}
+
+    &__container {
+        display: grid;
+        grid-template-rows: min-content 1fr min-content;
+        grid-template-columns: 1fr minmax(280px, max-content);
+    }
+
+    &__title {
+        @include roboto-regular;
+        font-size: 100px;
+        line-height: 110px;
+        color: $textBlack;
+        // margin: 0;
+    }
+
+    &__text {
+        @include roboto-regular;
+        font-size: 20px;
+        line-height: 28px;
+        color: $textBlack;
+        // margin: 0;
+    }
+
+}

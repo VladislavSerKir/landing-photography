@@ -1,0 +1,88 @@
+.camera {
+    background-color: $black;
+    padding: 50px 50px;
+
+    &__container {
+        display: grid;
+        grid-template-rows: 28px min-content min-content min-content;
+        grid-template-columns: 1fr min-content;
+    }
+
+    &-item:nth-child(1) {
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    &-item:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        margin: 50px 0 0;
+    }
+
+    &-item:nth-child(3) {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        justify-self: end;
+    }
+
+    &-item:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        align-self: flex-end;
+    }
+
+    &-item:nth-child(5) {
+        grid-row-start: 4;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    &-item:nth-child(6) {
+        grid-row-start: 4;
+        grid-row-end: 4;
+        grid-column-start: 2;
+        grid-column-end: 2;
+    }
+
+    &__suptext {
+        @include roboto-regular;
+        color: $textWhite;
+        font-size: 18px;
+        line-height: 28px;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        @include roboto-regular;
+        color: $textWhite;
+        font-size: 122px;
+        line-height: 122px;
+    }
+
+    &__author {
+        @include roboto-regular;
+        color: $textWhite;
+        font-size: 18px;
+        line-height: 28px;
+        margin: 60px 0 10px
+    }
+
+    &__mail {
+        @include roboto-regular;
+        color: $textWhite;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    &__message {
+        @include roboto-regular;
+        font-size: 43px;
+        line-height: 43px;
+        color: $textWhite;
+        margin-top: 180px;
+        max-width: 526px;
+    }
+}

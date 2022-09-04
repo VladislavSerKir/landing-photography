@@ -2,5 +2,18 @@
 @import url(../vendor/font.css);
 @import '../variables/color';
 @import '../variables/media';
+
+@import '../blocks/mixins/fonts';
+@import '../blocks/mixins/adaptivity';
+
 @import '../blocks/page/page';
-@import '../styles/mixins/mixins'
+@import '../styles/mixins/mixins';
+@import '../blocks/header/header';
+@import '../blocks/course/course';
+@import '../blocks/button/button';
+@import '../blocks/composition/composition';
+@import '../blocks/camera/camera';
+@import '../blocks/orders/orders';
+@import '../blocks/join/join';
+@import '../blocks/footer/footer';
+@import '../blocks/rotation/rotation';

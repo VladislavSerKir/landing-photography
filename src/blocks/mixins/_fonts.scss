@@ -1,0 +1,17 @@
+@mixin roboto-regular {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+@mixin roboto-bold {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    margin: 0;
+}
+
+@mixin inter-regular {
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
