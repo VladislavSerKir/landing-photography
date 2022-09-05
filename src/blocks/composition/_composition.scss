@@ -2,21 +2,50 @@
     background-color: $yellowGeneral;
     padding: 50px 50px;
 
+    @include adaptivity(1250px) {
+        padding: 40px;
+    }
+
+    @include adaptivity(654px) {
+        padding: 20px;
+    }
+
     &__container {
         display: grid;
         grid-template-rows: 28px min-content min-content min-content min-content;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 25px;
+
+        @include adaptivity(1250px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &-item:nth-child(1) {
         grid-row-start: 1;
         grid-row-end: 1;
+
+        @include adaptivity(654px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
 
     &-item:nth-child(2) {
         grid-column-start: 1;
-        grid-column-end: 1;
-        margin: 50px 0 100px;
+        grid-column-end: 2;
+        margin: 50px 0 0;
+
+        @include adaptivity(1250px) {
+            grid-row-start: 2;
+            grid-row-end: 2;
+            margin: 40px 0 60px;
+        }
+
+        @include adaptivity(654px) {
+            font-size: 30px;
+            line-height: 38px;
+        }
     }
 
     &-item:nth-child(3) {
@@ -25,23 +54,49 @@
         grid-column-start: 2;
         grid-column-end: 5;
         justify-self: end;
+        max-width: 642px;
+        height: 685px;
+
+        @include adaptivity(1350px) {
+            max-width: 500px;
+            height: auto;
+        }
+
+        @include adaptivity(1250px) {
+            grid-row-start: 3;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 1;
+            max-width: 688px;
+            justify-self: start;
+        }
+
+        @include adaptivity(768px) {
+            max-width: 100%;
+        }
     }
 
     &-item:nth-child(4) {
         grid-column-start: 1;
         grid-column-end: 1;
+
+        @include adaptivity(1250px) {
+            grid-row-start: 4;
+            grid-row-end: 4;
+            margin: 60px 0;
+        }
     }
 
     &-item:nth-child(5) {
         grid-column-start: 1;
         grid-column-end: 1;
         align-self: flex-end;
-    }
 
-    // &-item:nth-child(6) {
-    //     grid-row-start: 5;
-    //     grid-row-end: 5;
-    // }
+        @include adaptivity(1250px) {
+            grid-row-start: 5;
+            grid-row-end: 5;
+        }
+    }
 
     &-item:nth-child(6) {
         grid-row-start: 5;
@@ -49,6 +104,16 @@
         grid-column-start: 1;
         grid-column-end: 1;
         margin-top: 100px;
+
+        @include adaptivity(1250px) {
+            grid-row-start: 6;
+            grid-row-end: 6;
+            grid-column-start: 1;
+            grid-column-end: 1;
+            border-bottom: 1px solid $black;
+            margin-top: 80px;
+            padding-bottom: 30px;
+        }
     }
 
     &-item:nth-child(7) {
@@ -57,6 +122,16 @@
         grid-column-start: 2;
         grid-column-end: 2;
         margin-top: 100px;
+
+        @include adaptivity(1250px) {
+            grid-row-start: 7;
+            grid-row-end: 7;
+            grid-column-start: 1;
+            grid-column-end: 1;
+            border-bottom: 1px solid $black;
+            margin-top: 30px;
+            padding-bottom: 30px;
+        }
     }
 
     &-item:nth-child(8) {
@@ -65,6 +140,16 @@
         grid-column-start: 3;
         grid-column-end: 3;
         margin-top: 100px;
+
+        @include adaptivity(1250px) {
+            grid-row-start: 8;
+            grid-row-end: 8;
+            grid-column-start: 1;
+            grid-column-end: 1;
+            border-bottom: 1px solid $black;
+            margin-top: 30px;
+            padding-bottom: 30px;
+        }
     }
 
     &-item:nth-child(9) {
@@ -73,6 +158,14 @@
         grid-column-start: 4;
         grid-column-end: 4;
         margin-top: 100px;
+
+        @include adaptivity(1250px) {
+            grid-row-start: 9;
+            grid-row-end: 9;
+            grid-column-start: 1;
+            grid-column-end: 1;
+            margin-top: 30px;
+        }
     }
 
     &__suptext {
@@ -88,6 +181,11 @@
         color: $textBlack;
         font-size: 64px;
         line-height: 64px;
+
+        @include adaptivity(1250px) {
+            grid-row-start: 5;
+            grid-row-end: 5;
+        }
     }
 
     &__text {
@@ -95,6 +193,16 @@
         color: $textBlack;
         font-size: 18px;
         line-height: 28px;
+        max-width: 400px;
+
+        @include adaptivity(1250px) {
+            max-width: 100%;
+        }
+
+        @include adaptivity(654px) {
+            font-size: 14px;
+            line-height: 18px;
+        }
     }
 
     &__text:nth-child(1) {

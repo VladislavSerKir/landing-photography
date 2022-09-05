@@ -1,22 +1,51 @@
 .camera {
     background-color: $black;
-    padding: 50px 50px;
+    padding: 50px;
+
+    @include adaptivity(1250px) {
+        padding: 40px;
+    }
+
+    @include adaptivity(654px) {
+        padding: 20px;
+    }
 
     &__container {
         display: grid;
         grid-template-rows: 28px min-content min-content min-content;
         grid-template-columns: 1fr min-content;
+        column-gap: 25px;
+
+        @include adaptivity(1250px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &-item:nth-child(1) {
         grid-row-start: 1;
         grid-row-end: 1;
+
+        @include adaptivity(654px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
 
     &-item:nth-child(2) {
         grid-column-start: 1;
         grid-column-end: 1;
         margin: 50px 0 0;
+
+        @include adaptivity(1250px) {
+            grid-row-start: 2;
+            grid-row-end: 2;
+            margin: 40px 0 60px;
+        }
+
+        @include adaptivity(654px) {
+            font-size: 48px;
+            line-height: 56px;
+        }
     }
 
     &-item:nth-child(3) {
@@ -25,12 +54,47 @@
         grid-column-start: 2;
         grid-column-end: 2;
         justify-self: end;
+        max-width: 642px;
+        height: 832px;
+
+        @include adaptivity(1439px) {
+            max-width: 500px;
+        }
+
+        @include adaptivity(1250px) {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 3;
+            grid-row-end: 3;
+            max-width: 688px;
+            justify-self: start;
+            height: auto;
+        }
+
+        @include adaptivity(768px) {
+            max-width: 100%;
+        }
     }
 
     &-item:nth-child(4) {
         grid-column-start: 1;
         grid-column-end: 1;
         align-self: flex-end;
+
+        @include adaptivity(1439px) {
+            margin-top: 30px;
+        }
+
+        @include adaptivity(1250px) {
+            grid-row-start: 4;
+            grid-row-end: 4;
+            margin-top: 60px;
+        }
+
+        @include adaptivity(654px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
 
     &-item:nth-child(5) {
@@ -38,6 +102,15 @@
         grid-row-end: 4;
         grid-column-start: 1;
         grid-column-end: 1;
+        margin-top: 180px;
+
+        @include adaptivity(1250px) {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 5;
+            grid-row-end: 5;
+            margin-bottom: 60px;
+        }
     }
 
     &-item:nth-child(6) {
@@ -45,6 +118,17 @@
         grid-row-end: 4;
         grid-column-start: 2;
         grid-column-end: 2;
+        margin-top: 180px;
+
+        @include adaptivity(1250px) {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 6;
+            grid-row-end: 6;
+            margin: 0;
+            padding-top: 60px;
+            border-top: 1px solid $white;
+        }
     }
 
     &__suptext {
@@ -60,6 +144,12 @@
         color: $textWhite;
         font-size: 122px;
         line-height: 122px;
+        max-width: 688px;
+
+        @include adaptivity(697px) {
+            font-size: 80px;
+            line-height: 80px;
+        }
     }
 
     &__author {
@@ -67,7 +157,12 @@
         color: $textWhite;
         font-size: 18px;
         line-height: 28px;
-        margin: 60px 0 10px
+        margin: 60px 0 10px;
+
+        @include adaptivity(654px) {
+            font-size: 12px;
+            line-height: 12px;
+        }
     }
 
     &__mail {
@@ -75,6 +170,11 @@
         color: $textWhite;
         font-size: 18px;
         line-height: 28px;
+
+        @include adaptivity(654px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
 
     &__message {
@@ -82,7 +182,15 @@
         font-size: 43px;
         line-height: 43px;
         color: $textWhite;
-        margin-top: 180px;
         max-width: 526px;
+
+        @include adaptivity(1250px) {
+            max-width: 100%;
+        }
+
+        @include adaptivity(654px) {
+            font-size: 24px;
+            line-height: 26px;
+        }
     }
 }

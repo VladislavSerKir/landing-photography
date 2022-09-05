@@ -2,6 +2,14 @@
     background-color: $redGeneral;
     padding: 50px 50px 36px;
 
+    @include adaptivity(1250px) {
+        padding: 40px;
+    }
+
+    @include adaptivity(654px) {
+        padding: 20px;
+    }
+
     &__container {
         @include flex(stretch, flex-start);
         gap: 50px;
@@ -17,11 +25,35 @@
         line-height: 120px;
         color: $textWhite;
         margin-bottom: 120px;
+
+        @include adaptivity(979px) {
+            font-size: 100px;
+            line-height: 100px;
+        }
+
+        @include adaptivity(788px) {
+            margin-bottom: 180px;
+        }
+
+        @include adaptivity(697px) {
+            font-size: 80px;
+            line-height: 80px;
+        }
+
+        @include adaptivity(654px) {
+            font-size: 48px;
+            line-height: 50px;
+            max-width: 300px;
+        }
     }
 
     &__image {
         max-width: 129px;
         height: 100%;
+
+        @include adaptivity(979px) {
+            display: none;
+        }
     }
 
     &__form {
@@ -30,6 +62,10 @@
         border-radius: 8px;
         height: 46px;
         width: 551px;
+
+        @include adaptivity(654px) {
+            width: 282px;
+        }
     }
 
     &__input-button,
@@ -39,6 +75,10 @@
         color: $textBlack;
         font-size: 14px;
         line-height: 24px;
+
+        @include adaptivity(654px) {
+            font-size: 11px;
+        }
     }
 
     &__input-email {
@@ -47,6 +87,10 @@
         margin-left: 20px;
         padding: 0;
         cursor: pointer;
+
+        @include adaptivity(654px) {
+            width: 155px;
+        }
     }
 
     &__input-email:active,
@@ -62,6 +106,11 @@
         border: none;
         border-left: 2px solid $black;
         padding: 0 0 0 60px;
+
+        @include adaptivity(654px) {
+            font-size: 11px;
+            padding: 0 0 0 18px;
+        }
     }
 
     &__input-button:hover {

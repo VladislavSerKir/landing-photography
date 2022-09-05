@@ -1,22 +1,50 @@
 .orders {
     background-color: $white;
-    padding: 50px 50px;
+    padding: 50px;
+
+    @include adaptivity(1250px) {
+        padding: 40px;
+    }
+
+    @include adaptivity(654px) {
+        padding: 20px;
+    }
 
     &__container {
         display: grid;
         grid-template-rows: 28px min-content min-content;
         grid-template-columns: min-content 1fr;
+
+        @include adaptivity(1250px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &-item:nth-child(1) {
         grid-row-start: 1;
         grid-row-end: 1;
+
+        @include adaptivity(654px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
 
     &-item:nth-child(2) {
         grid-column-start: 1;
         grid-column-end: 1;
         margin: 50px 0 106px;
+
+        @include adaptivity(1250px) {
+            grid-row-start: 2;
+            grid-row-end: 2;
+            margin: 40px 0 60px;
+        }
+
+        @include adaptivity(654px) {
+            font-size: 32px;
+            line-height: 38px;
+        }
     }
 
     &-item:nth-child(3) {
@@ -25,6 +53,20 @@
         grid-column-start: 1;
         grid-column-end: 1;
         justify-self: end;
+        max-width: 648px;
+        height: 333px;
+
+        @include adaptivity(1250px) {
+            grid-row-start: 3;
+            grid-row-end: 3;
+            justify-self: start;
+            height: auto;
+
+        }
+
+        @include adaptivity(768px) {
+            max-width: 100%;
+        }
     }
 
     &-item:nth-child(4) {
@@ -34,6 +76,15 @@
         grid-column-end: 2;
         align-self: flex-end;
         justify-self: end;
+
+        @include adaptivity(1250px) {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 4;
+            grid-row-end: 4;
+            justify-self: start;
+            margin-top: 60px;
+        }
     }
 
     &__block-reviews {
@@ -61,5 +112,14 @@
         font-size: 18px;
         line-height: 28px;
         margin-bottom: 148px;
+
+        @include adaptivity(1250px) {
+            margin-bottom: 60px;
+        }
+
+        @include adaptivity(654px) {
+            font-size: 14px;
+            line-height: 18px;
+        }
     }
 }

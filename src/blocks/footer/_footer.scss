@@ -1,6 +1,5 @@
 .footer {
     background-color: $redGeneral;
-    min-height: 124px;
 
     &__copyright {
         @include roboto-bold;
@@ -8,5 +7,15 @@
         line-height: 24px;
         color: $textWhite;
         padding: 50px;
+
+        @include adaptivity(788px) {
+            padding: 40px;
+            min-height: auto;
+        }
+
+        @include adaptivity(654px) {
+            font-size: 12px;
+            padding: 20px;
+        }
     }
 }

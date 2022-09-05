@@ -4,10 +4,23 @@
     @include flex(center, space-between);
     padding: 0 50px;
 
+    @include adaptivity(1250px) {
+        padding: 0 40px;
+    }
+
+    @include adaptivity(654px) {
+        min-height: 70px;
+        padding: 0 20px;
+    }
+
     &__links {
         list-style: none;
         @include flex(center, space-between);
         gap: 40px;
+
+        @include adaptivity(654px) {
+            display: none;
+        }
     }
 
     &__link {
@@ -21,14 +34,16 @@
             @include roboto-bold;
         }
     }
-}
 
-@keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
+    &__logo {
+        @include adaptivity(788px) {
+            width: 36px;
+            height: 36px;
+        }
 
-    100% {
-        transform: rotate(360deg);
+        @include adaptivity(654px) {
+            width: 30px;
+            height: 30px;
+        }
     }
 }
