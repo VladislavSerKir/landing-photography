@@ -18,6 +18,10 @@
         @include adaptivity(1250px) {
             grid-template-columns: 1fr;
         }
+
+        @include adaptivity(654px) {
+            grid-template-rows: min-content min-content min-content;
+        }
     }
 
     &-item:nth-child(1) {
@@ -27,6 +31,9 @@
         @include adaptivity(654px) {
             font-size: 14px;
             line-height: 20px;
+            margin-top: 20px;
+            border-top: 1px solid $white;
+            padding-top: 20px;
         }
     }
 
@@ -44,6 +51,7 @@
         @include adaptivity(654px) {
             font-size: 32px;
             line-height: 38px;
+            margin: 30px 0 60px;
         }
     }
 
@@ -120,6 +128,7 @@
         @include adaptivity(654px) {
             font-size: 14px;
             line-height: 18px;
+            margin-bottom: 28px;
         }
     }
 }

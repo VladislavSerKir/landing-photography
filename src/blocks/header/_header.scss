@@ -16,7 +16,7 @@
     &__links {
         list-style: none;
         @include flex(center, space-between);
-        gap: 40px;
+        gap: 44px;
 
         @include adaptivity(654px) {
             display: none;
