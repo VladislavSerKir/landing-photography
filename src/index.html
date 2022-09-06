@@ -12,7 +12,13 @@
     <div class="page">
         <header class="header">
             <img src="<%=require('./images/header-logo.png')%>" alt="Лого" class="header__logo rotation">
-            <nav>
+            <button class="header__bar">
+                <img src="<%=require('./images/menu-bar.png')%>" alt="Меню">
+            </button>
+            <button class="header__close-button">
+                <img src="<%=require('./images/close-button.png')%>" alt="Закрыть">
+            </button>
+            <nav class="header__nav">
                 <ul class="header__links">
                     <li>
                         <a class="header__link" href="#">Композиция</a>
@@ -143,8 +149,8 @@
                     <div class="join__group">
                         <h3 class="join__title">Записаться! Сейчас!</h3>
 
-                        <form action="post" class="join__form" name="subscription-data">
-                            <input type="text" class="join__input-email" id="email" placeholder="Ваша почта">
+                        <form action="post" class="join__form" name="subscriptionData">
+                            <input type="email" class="join__input-email" id="email" placeholder="Ваша почта">
                             <button class="join__input-button" type="submit">Записаться!</button>
                         </form>
 

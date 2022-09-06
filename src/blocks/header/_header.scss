@@ -3,6 +3,7 @@
     min-height: 84px;
     @include flex(center, space-between);
     padding: 0 50px;
+    position: relative;
 
     @include adaptivity(1250px) {
         padding: 0 40px;
@@ -13,12 +14,44 @@
         padding: 0 20px;
     }
 
+    &__close-button {
+        display: none;
+        background-color: $redGeneral;
+        border: none;
+        padding: 0;
+        position: absolute;
+        right: 40px;
+        cursor: pointer;
+
+        @include adaptivity-min(654px) {
+            right: 20px;
+        }
+    }
+
+    &__bar {
+        display: none;
+        background-color: $redGeneral;
+        border: none;
+        padding: 0;
+        position: absolute;
+        right: 40px;
+        cursor: pointer;
+
+        @include adaptivity-min(768px) {
+            display: block;
+        }
+
+        @include adaptivity-min(654px) {
+            right: 20px;
+        }
+    }
+
     &__links {
         list-style: none;
         @include flex(center, space-between);
         gap: 44px;
 
-        @include adaptivity(654px) {
+        @include adaptivity(768px) {
             display: none;
         }
     }
