@@ -2,22 +2,27 @@ const headerElement = document.querySelector('.header');
 const menuButton = headerElement.querySelector('.header__bar');
 const headerLogo = headerElement.querySelector('.header__logo');
 const headerMenu = headerElement.querySelector('.header__links');
-const closeButton = headerElement.querySelector('.header__close-button')
+const closeButton = headerElement.querySelector('.header__close-button');
+const wrapper = headerElement.querySelector('.wrapper');
+const headerContainer = headerElement.querySelector('.header__container');
 
-menuButton.addEventListener('click', (event) => {
-    console.log(headerElement, menuButton, headerLogo, headerMenu, closeButton)
-    menuButton.style.display = 'none';
-    headerLogo.style.display = 'none';
-    closeButton.style.display = 'block';
-    headerMenu.style.display = 'flex';
-    headerMenu.style.padding = '0px';
-})
+// разворачивание бургерного меню на мобильном разрешении
+menuButton.addEventListener("click", () => {
+    closeButton.classList.toggle("header__close-button_visible");
+    headerContainer.toggleAttribute("hidden");
+    wrapper.toggleAttribute("hidden");
+});
 
-closeButton.addEventListener('click', (event) => {
-    console.log(headerElement, menuButton, headerLogo, headerMenu, closeButton)
-    menuButton.style.display = 'block';
-    headerLogo.style.display = 'block';
-    closeButton.style.display = 'none';
-    headerMenu.style.display = 'none';
-    headerMenu.style.padding = '40px';
-})
+closeButton.addEventListener("click", () => {
+    closeButton.classList.toggle("header__close-button_visible");
+    headerContainer.toggleAttribute("hidden");
+    wrapper.toggleAttribute("hidden");
+});
+
+window.addEventListener('resize', function (event) {
+    if (event.target.innerWidth > 768 && Array.from(closeButton.classList).includes('header__close-button_visible')) {
+        closeButton.classList.toggle("header__close-button_visible");
+        headerContainer.toggleAttribute("hidden");
+        wrapper.toggleAttribute("hidden");
+    }
+}, true);

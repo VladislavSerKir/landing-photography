@@ -10,27 +10,52 @@
 
 <body>
     <div class="page">
-        <header class="header">
-            <img src="<%=require('./images/header-logo.png')%>" alt="Лого" class="header__logo rotation">
-            <button class="header__bar">
-                <img src="<%=require('./images/menu-bar.png')%>" alt="Меню">
-            </button>
-            <button class="header__close-button">
-                <img src="<%=require('./images/close-button.png')%>" alt="Закрыть">
-            </button>
-            <nav class="header__nav">
-                <ul class="header__links">
-                    <li>
-                        <a class="header__link" href="#">Композиция</a>
-                    </li>
-                    <li class="header__link">
-                        <a class="header__link" href="#">Камера</a>
-                    </li>
-                    <li class="header__link">
-                        <a class="header__link" href="#">Поиск заказов</a>
-                    </li>
-                </ul>
-            </nav>
+
+        <header class="header header_sticky">
+            <div class="header__container">
+                <img src="<%=require('./images/header-logo.png')%>" alt="Лого" class="header__logo rotation">
+                <button class="header__bar">
+                    <img src="<%=require('./images/menu-bar.png')%>" alt="Меню">
+                </button>
+                <button class="header__close-button">
+                    <img src="<%=require('./images/close-button.png')%>" alt="Закрыть">
+                </button>
+                <nav class="header__nav">
+                    <ul class="header__links">
+                        <li>
+                            <a class="header__link" href="#">Композиция</a>
+                        </li>
+                        <li class="header__link">
+                            <a class="header__link" href="#">Камера</a>
+                        </li>
+                        <li class="header__link">
+                            <a class="header__link" href="#">Поиск заказов</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="wrapper" hidden>
+                <div class="header__burger-menu">
+                    <button class="header__close-button">
+                        <img src="<%=require('./images/close-button.png')%>" alt="Закрыть">
+                    </button>
+                    <nav class="header__nav">
+                        <ul class="header__links header__links_unfolded">
+                            <li>
+                                <a class="header__link" href="#">Композиция</a>
+                            </li>
+                            <li class="header__link">
+                                <a class="header__link" href="#">Камера</a>
+                            </li>
+                            <li class="header__link">
+                                <a class="header__link" href="#">Поиск заказов</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
         </header>
 
         <main>

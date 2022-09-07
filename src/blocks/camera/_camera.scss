@@ -202,10 +202,6 @@
         color: $textWhite;
         max-width: 526px;
 
-        // @include adaptivity(1250px) {
-        //     max-width: 100%;
-        // }
-
         @include adaptivity(654px) {
             font-size: 24px;
             line-height: 26px;

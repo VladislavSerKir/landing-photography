@@ -1,17 +1,24 @@
 .header {
     background-color: $redGeneral;
-    min-height: 84px;
-    @include flex(center, space-between);
-    padding: 0 50px;
-    position: relative;
 
-    @include adaptivity(1250px) {
-        padding: 0 40px;
+    &__container {
+        min-height: 84px;
+        padding: 0 50px;
+        @include flex(center, space-between);
+
+        @include adaptivity(1250px) {
+            padding: 0 40px;
+        }
+
+        @include adaptivity(654px) {
+            min-height: 70px;
+            padding: 0 20px;
+        }
     }
 
-    @include adaptivity(654px) {
-        min-height: 70px;
-        padding: 0 20px;
+    &_sticky {
+        position: sticky;
+        top: 0;
     }
 
     &__close-button {
@@ -26,6 +33,10 @@
         @include adaptivity-min(654px) {
             right: 20px;
         }
+    }
+
+    &__close-button_visible {
+        display: block;
     }
 
     &__bar {
@@ -50,10 +61,19 @@
         list-style: none;
         @include flex(center, space-between);
         gap: 44px;
+        padding: 0;
 
         @include adaptivity(768px) {
             display: none;
+            gap: 12px;
         }
+    }
+
+    &__links_unfolded {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding-bottom: 26px;
     }
 
     &__link {
