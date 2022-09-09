@@ -14,10 +14,10 @@
         <header class="header header_sticky">
             <div class="header__container">
                 <img src="<%=require('./images/header-logo.png')%>" alt="Лого" class="header__logo rotation">
-                <button class="header__bar">
+                <button class="header__bar" type="button">
                     <img src="<%=require('./images/menu-bar.png')%>" alt="Меню">
                 </button>
-                <button class="header__close-button">
+                <button class="header__close-button" type="button">
                     <img src="<%=require('./images/close-button.png')%>" alt="Закрыть">
                 </button>
                 <nav class="header__nav">
@@ -37,7 +37,7 @@
 
             <div class="wrapper" hidden>
                 <div class="header__burger-menu">
-                    <button class="header__close-button">
+                    <button class="header__close-button" type="button">
                         <img src="<%=require('./images/close-button.png')%>" alt="Закрыть">
                     </button>
                     <nav class="header__nav">
@@ -69,7 +69,7 @@
                     <p class="course__text course-item">
                         Фотография в природных условиях, уроки по композиции и по пользованию камерой.
                     </p>
-                    <button class="button course-item">Подробнее</button>
+                    <button class="button course-item" type="button">Подробнее</button>
 
                 </div>
             </section>
@@ -93,7 +93,7 @@
                             и какие-то определённые законы.
                         </p>
                     </div>
-                    <button class="button composition-item">Записаться!</button>
+                    <button class="button composition-item" type="button">Записаться!</button>
 
                     <p class="composition__text composition-item">Правило третей, при котором нужно распологать объекты
                         на пересечениях.</p>
@@ -161,7 +161,7 @@
                             Мы научим вас искать заказы на всяких фриланс биржах, а когда вы сделаете крутое портфолио,
                             мы поможем найти постоянную работу.
                         </p>
-                        <button class="button">Записаться!</button>
+                        <button class="button" type="button">Записаться!</button>
                     </div>
 
                 </div>
@@ -175,7 +175,7 @@
                         <h3 class="join__title">Записаться! Сейчас!</h3>
 
                         <form action="post" class="join__form" name="subscriptionData">
-                            <input type="email" class="join__input-email" id="email" placeholder="Ваша почта">
+                            <input type="email" class="join__input-email" id="email" placeholder="Ваша почта" required>
                             <button class="join__input-button" type="submit">Записаться!</button>
                         </form>
 
