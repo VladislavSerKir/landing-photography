@@ -1,5 +1,6 @@
 .header {
     background-color: $redGeneral;
+    transition: all 0.5s;
 
     &__container {
         min-height: 84px;
